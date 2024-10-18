@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<DIAGRAMA ID="1" TIPO="tpLogico" UniversalUnicID="7DDE-13-C7B-BE-41FA-3B-FB">
+<DIAGRAMA ID="1" TIPO="tpLogico" UniversalUnicID="B753-BD-445A-9-3DD-96-DE">
     <InfoDiagrama ID="1">
         <Versao Valor="3.2.0"/>
         <Autores/>
@@ -8,15 +8,15 @@
         <Height Valor="4096"/>
         <Alinhamento_v Valor="50"/>
         <Alinhamento_h Valor="60"/>
-        <Zoom Valor="100"/>
+        <Zoom Valor="75"/>
         <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
-        <Localizacao Left="227" Top="163"/>
+        <Localizacao Left="128" Top="84"/>
         <Realce Valor="false"/>
         <SeparatorSQL Valor=";"/>
         <Prefixo Valor=""/>
     </InfoDiagrama>
     <Tabela ID="2">
-        <Bounds Height="281" Left="335" Top="581" Width="150"/>
+        <Bounds Height="281" Left="318" Top="165" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Usuario</Texto>
         <Observacao/>
@@ -44,7 +44,7 @@
         <Campos>
             <Campo>
                 <Texto>Nome_Usuario</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -54,7 +54,7 @@
             </Campo>
             <Campo>
                 <Texto>Estado</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -64,7 +64,7 @@
             </Campo>
             <Campo>
                 <Texto>CEP</Texto>
-                <Tipo/>
+                <Tipo>CHAR(11)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -74,7 +74,7 @@
             </Campo>
             <Campo>
                 <Texto>Cidade</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -84,7 +84,7 @@
             </Campo>
             <Campo>
                 <Texto>Rua</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -94,7 +94,7 @@
             </Campo>
             <Campo>
                 <Texto>Data_Nasc</Texto>
-                <Tipo/>
+                <Tipo>DATE</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -104,7 +104,7 @@
             </Campo>
             <Campo>
                 <Texto>Senha</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -114,7 +114,7 @@
             </Campo>
             <Campo>
                 <Texto>Email</Texto>
-                <Tipo/>
+                <Tipo>CHAR(40)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -124,7 +124,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -134,7 +134,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Avaliacao_ID_Avaliacao</Texto>
-                <Tipo>number(5)</Tipo>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -169,7 +169,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="3">
-        <Bounds Height="149" Left="735" Top="890" Width="150"/>
+        <Bounds Height="149" Left="822" Top="890" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Conteudo</Texto>
         <Observacao/>
@@ -197,7 +197,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -207,7 +207,7 @@
             </Campo>
             <Campo>
                 <Texto>Sinopse</Texto>
-                <Tipo/>
+                <Tipo>CHAR(40)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -217,7 +217,7 @@
             </Campo>
             <Campo>
                 <Texto>Titulo</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -227,7 +227,7 @@
             </Campo>
             <Campo>
                 <Texto>Duracao</Texto>
-                <Tipo/>
+                <Tipo>TIMESTAMP</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -251,7 +251,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="4">
-        <Bounds Height="149" Left="419" Top="942" Width="150"/>
+        <Bounds Height="149" Left="317" Top="888" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Plano</Texto>
         <Observacao/>
@@ -279,7 +279,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Plano</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -289,7 +289,7 @@
             </Campo>
             <Campo>
                 <Texto>Tipo</Texto>
-                <Tipo/>
+                <Tipo>CHAR(11)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -299,7 +299,7 @@
             </Campo>
             <Campo>
                 <Texto>Valor</Texto>
-                <Tipo/>
+                <Tipo>FLOAT(5)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -309,7 +309,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Usuario_ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -344,7 +344,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="5">
-        <Bounds Height="149" Left="729" Top="181" Width="150"/>
+        <Bounds Height="149" Left="862" Top="166" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Avaliacao</Texto>
         <Observacao/>
@@ -372,7 +372,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Avaliacao</Texto>
-                <Tipo>number(5)</Tipo>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -382,7 +382,7 @@
             </Campo>
             <Campo>
                 <Texto>Nota</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(5)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -392,7 +392,7 @@
             </Campo>
             <Campo>
                 <Texto>Comentario</Texto>
-                <Tipo/>
+                <Tipo>CHAR(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -402,7 +402,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -437,7 +437,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="6">
-        <Bounds Height="215" Left="1165" Top="407" Width="150"/>
+        <Bounds Height="215" Left="1226" Top="704" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Genero</Texto>
         <Observacao/>
@@ -465,7 +465,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Genero</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -475,7 +475,7 @@
             </Campo>
             <Campo>
                 <Texto>Horror</Texto>
-                <Tipo/>
+                <Tipo>BOOLEAN</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -485,7 +485,7 @@
             </Campo>
             <Campo>
                 <Texto>Comedia</Texto>
-                <Tipo/>
+                <Tipo>BOOLEAN</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -495,7 +495,7 @@
             </Campo>
             <Campo>
                 <Texto>Acao</Texto>
-                <Tipo/>
+                <Tipo>BOOLEAN</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -505,7 +505,7 @@
             </Campo>
             <Campo>
                 <Texto>Ficcao</Texto>
-                <Tipo/>
+                <Tipo>BOOLEAN</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -515,7 +515,7 @@
             </Campo>
             <Campo>
                 <Texto>Aventura</Texto>
-                <Tipo/>
+                <Tipo>BOOLEAN</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -525,7 +525,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -560,7 +560,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="7">
-        <Bounds Height="105" Left="793" Top="1119" Width="150"/>
+        <Bounds Height="105" Left="1065" Top="1229" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Filme</Texto>
         <Observacao/>
@@ -588,7 +588,7 @@
         <Campos>
             <Campo>
                 <Texto>Tipo_Filme</Texto>
-                <Tipo/>
+                <Tipo>CHAR(11)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -598,7 +598,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -633,7 +633,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="8">
-        <Bounds Height="105" Left="729" Top="1304" Width="150"/>
+        <Bounds Height="105" Left="714" Top="1280" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Serie</Texto>
         <Observacao/>
@@ -661,7 +661,7 @@
         <Campos>
             <Campo>
                 <Texto>Temporada</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(5)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -671,7 +671,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -706,7 +706,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="9">
-        <Bounds Height="171" Left="729" Top="1304" Width="150"/>
+        <Bounds Height="171" Left="484" Top="1228" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Episodio</Texto>
         <Observacao/>
@@ -734,7 +734,7 @@
         <Campos>
             <Campo>
                 <Texto>Nome_Episodio</Texto>
-                <Tipo/>
+                <Tipo>CHAR(40)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -744,7 +744,7 @@
             </Campo>
             <Campo>
                 <Texto>Duracao_Episodio</Texto>
-                <Tipo/>
+                <Tipo>TIMESTAMP</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -754,7 +754,7 @@
             </Campo>
             <Campo>
                 <Texto>Sinopse_Episodio</Texto>
-                <Tipo/>
+                <Tipo>CHAR(40)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -764,7 +764,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Episodio</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -774,7 +774,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Serie_fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -809,7 +809,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="10">
-        <Bounds Height="149" Left="1133" Top="702" Width="150"/>
+        <Bounds Height="149" Left="1228" Top="972" Width="150"/>
         <DisablePainted Valor="false"/>
         <Texto>Legenda</Texto>
         <Observacao/>
@@ -837,7 +837,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Legenda</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -847,7 +847,7 @@
             </Campo>
             <Campo>
                 <Texto>Linguagem</Texto>
-                <Tipo/>
+                <Tipo>CHAR(11)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -857,7 +857,7 @@
             </Campo>
             <Campo>
                 <Texto>Tamanho</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -867,7 +867,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -902,9 +902,9 @@
         </Constraints>
     </Tabela>
     <Tabela ID="11">
-        <Bounds Height="149" Left="729" Top="661" Width="150"/>
+        <Bounds Height="149" Left="553" Top="708" Width="150"/>
         <DisablePainted Valor="false"/>
-        <Texto>Lista_Desejo_Vera</Texto>
+        <Texto>Lista_Desejo</Texto>
         <Observacao/>
         <Dicionario/>
         <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -930,7 +930,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -940,7 +940,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -950,7 +950,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Usuario_ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -960,7 +960,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -995,9 +995,9 @@
         </Constraints>
     </Tabela>
     <Tabela ID="12">
-        <Bounds Height="171" Left="729" Top="410" Width="150"/>
+        <Bounds Height="171" Left="766" Top="365" Width="150"/>
         <DisablePainted Valor="false"/>
-        <Texto>Visualizacao_Assiste</Texto>
+        <Texto>Visualizacao</Texto>
         <Observacao/>
         <Dicionario/>
         <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -1023,7 +1023,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -1033,7 +1033,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -1043,7 +1043,7 @@
             </Campo>
             <Campo>
                 <Texto>Hora_Assistida</Texto>
-                <Tipo/>
+                <Tipo>TIMESTAMP</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -1053,7 +1053,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Conteudo_ID_Conteudo</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -1063,7 +1063,7 @@
             </Campo>
             <Campo>
                 <Texto>fk_Usuario_ID_Usuario</Texto>
-                <Tipo/>
+                <Tipo>NUMERIC(3)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -1081,7 +1081,7 @@
                 <Observacao/>
                 <DdlOnUpdate/>
                 <DdlOnDelete/>
-                <LigacaoParaOrigem ID="-1"/>
+                <LigacaoParaOrigem ID="45"/>
                 <ConstraintOrigem CamposDestino="[3]" CamposOrigem="[0]" ID="3,0">IR chave primária</ConstraintOrigem>
             </Constraint>
             <Constraint>
@@ -1111,13 +1111,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="7"/>
         <Pontos>
-            <Ponto Left="830" Top="1036"/>
-            <Ponto Left="830" Top="1076"/>
-            <Ponto Left="868" Top="1076"/>
-            <Ponto Left="868" Top="1116"/>
+            <Ponto Left="917" Top="1036"/>
+            <Ponto Left="917" Top="1131"/>
+            <Ponto Left="1140" Top="1131"/>
+            <Ponto Left="1140" Top="1226"/>
         </Pontos>
         <LogicoCardinalidade ID="14">
-            <Bounds Height="14" Left="797" Top="1046" Width="35"/>
+            <Bounds Height="14" Left="880" Top="1046" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_1</Texto>
             <Observacao/>
@@ -1131,7 +1131,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="15">
-            <Bounds Height="14" Left="835" Top="1098" Width="35"/>
+            <Bounds Height="14" Left="1103" Top="1208" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_2</Texto>
             <Observacao/>
@@ -1159,13 +1159,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="8"/>
         <Pontos>
-            <Ponto Left="788" Top="1036"/>
-            <Ponto Left="788" Top="1168"/>
-            <Ponto Left="804" Top="1168"/>
-            <Ponto Left="804" Top="1301"/>
+            <Ponto Left="875" Top="1036"/>
+            <Ponto Left="875" Top="1156"/>
+            <Ponto Left="789" Top="1156"/>
+            <Ponto Left="789" Top="1277"/>
         </Pontos>
         <LogicoCardinalidade ID="17">
-            <Bounds Height="14" Left="755" Top="1046" Width="35"/>
+            <Bounds Height="14" Left="838" Top="1046" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_3</Texto>
             <Observacao/>
@@ -1179,7 +1179,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="18">
-            <Bounds Height="14" Left="771" Top="1283" Width="35"/>
+            <Bounds Height="14" Left="752" Top="1259" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_4</Texto>
             <Observacao/>
@@ -1207,13 +1207,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="2" PontaB="4"/>
         <Pontos>
-            <Ponto Left="410" Top="859"/>
-            <Ponto Left="410" Top="899"/>
-            <Ponto Left="494" Top="899"/>
-            <Ponto Left="494" Top="939"/>
+            <Ponto Left="393" Top="443"/>
+            <Ponto Left="393" Top="664"/>
+            <Ponto Left="392" Top="664"/>
+            <Ponto Left="392" Top="885"/>
         </Pontos>
         <LogicoCardinalidade ID="20">
-            <Bounds Height="14" Left="377" Top="869" Width="35"/>
+            <Bounds Height="14" Left="356" Top="453" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_5</Texto>
             <Observacao/>
@@ -1227,7 +1227,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="21">
-            <Bounds Height="14" Left="461" Top="921" Width="35"/>
+            <Bounds Height="14" Left="354" Top="867" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_6</Texto>
             <Observacao/>
@@ -1255,13 +1255,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="10"/>
         <Pontos>
-            <Ponto Left="882" Top="985"/>
-            <Ponto Left="1006" Top="985"/>
-            <Ponto Left="1006" Top="776"/>
-            <Ponto Left="1130" Top="776"/>
+            <Ponto Left="969" Top="985"/>
+            <Ponto Left="1097" Top="985"/>
+            <Ponto Left="1097" Top="1046"/>
+            <Ponto Left="1225" Top="1046"/>
         </Pontos>
         <LogicoCardinalidade ID="23">
-            <Bounds Height="14" Left="892" Top="973" Width="35"/>
+            <Bounds Height="14" Left="979" Top="973" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_7</Texto>
             <Observacao/>
@@ -1275,7 +1275,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="24">
-            <Bounds Height="14" Left="1091" Top="764" Width="35"/>
+            <Bounds Height="14" Left="1181" Top="1034" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_8</Texto>
             <Observacao/>
@@ -1303,13 +1303,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="5"/>
         <Pontos>
-            <Ponto Left="778" Top="887"/>
-            <Ponto Left="778" Top="607"/>
-            <Ponto Left="804" Top="607"/>
-            <Ponto Left="804" Top="327"/>
+            <Ponto Left="937" Top="886"/>
+            <Ponto Left="937" Top="599"/>
+            <Ponto Left="937" Top="599"/>
+            <Ponto Left="937" Top="312"/>
         </Pontos>
         <LogicoCardinalidade ID="26">
-            <Bounds Height="14" Left="745" Top="869" Width="35"/>
+            <Bounds Height="14" Left="900" Top="868" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_9</Texto>
             <Observacao/>
@@ -1323,7 +1323,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="27">
-            <Bounds Height="14" Left="771" Top="337" Width="35"/>
+            <Bounds Height="14" Left="899" Top="322" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_10</Texto>
             <Observacao/>
@@ -1351,13 +1351,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="5" PontaB="2"/>
         <Pontos>
-            <Ponto Left="726" Top="255"/>
-            <Ponto Left="604" Top="255"/>
-            <Ponto Left="604" Top="656"/>
-            <Ponto Left="482" Top="656"/>
+            <Ponto Left="859" Top="240"/>
+            <Ponto Left="662" Top="240"/>
+            <Ponto Left="662" Top="240"/>
+            <Ponto Left="465" Top="240"/>
         </Pontos>
         <LogicoCardinalidade ID="29">
-            <Bounds Height="14" Left="687" Top="243" Width="35"/>
+            <Bounds Height="14" Left="816" Top="228" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_11</Texto>
             <Observacao/>
@@ -1371,7 +1371,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="30">
-            <Bounds Height="14" Left="492" Top="644" Width="35"/>
+            <Bounds Height="14" Left="475" Top="228" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_12</Texto>
             <Observacao/>
@@ -1399,13 +1399,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="6"/>
         <Pontos>
-            <Ponto Left="882" Top="943"/>
-            <Ponto Left="1022" Top="943"/>
-            <Ponto Left="1022" Top="514"/>
-            <Ponto Left="1162" Top="514"/>
+            <Ponto Left="969" Top="943"/>
+            <Ponto Left="1096" Top="943"/>
+            <Ponto Left="1096" Top="811"/>
+            <Ponto Left="1223" Top="811"/>
         </Pontos>
         <LogicoCardinalidade ID="32">
-            <Bounds Height="14" Left="892" Top="931" Width="35"/>
+            <Bounds Height="14" Left="979" Top="931" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_13</Texto>
             <Observacao/>
@@ -1419,7 +1419,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="33">
-            <Bounds Height="14" Left="1123" Top="502" Width="35"/>
+            <Bounds Height="14" Left="1179" Top="799" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_14</Texto>
             <Observacao/>
@@ -1447,13 +1447,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="8" PontaB="9"/>
         <Pontos>
-            <Ponto Left="804" Top="1406"/>
-            <Ponto Left="804" Top="1482"/>
-            <Ponto Left="804" Top="1482"/>
-            <Ponto Left="804" Top="1472"/>
+            <Ponto Left="789" Top="1382"/>
+            <Ponto Left="789" Top="1406"/>
+            <Ponto Left="559" Top="1406"/>
+            <Ponto Left="559" Top="1396"/>
         </Pontos>
         <LogicoCardinalidade ID="35">
-            <Bounds Height="14" Left="771" Top="1416" Width="35"/>
+            <Bounds Height="14" Left="752" Top="1392" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_15</Texto>
             <Observacao/>
@@ -1467,7 +1467,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="36">
-            <Bounds Height="14" Left="771" Top="1482" Width="35"/>
+            <Bounds Height="14" Left="521" Top="1406" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_16</Texto>
             <Observacao/>
@@ -1495,13 +1495,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="11" PontaB="2"/>
         <Pontos>
-            <Ponto Left="726" Top="735"/>
-            <Ponto Left="604" Top="735"/>
-            <Ponto Left="604" Top="784"/>
-            <Ponto Left="482" Top="784"/>
+            <Ponto Left="550" Top="782"/>
+            <Ponto Left="507" Top="782"/>
+            <Ponto Left="507" Top="368"/>
+            <Ponto Left="465" Top="368"/>
         </Pontos>
         <LogicoCardinalidade ID="39">
-            <Bounds Height="14" Left="687" Top="723" Width="35"/>
+            <Bounds Height="14" Left="506" Top="770" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_17</Texto>
             <Observacao/>
@@ -1515,7 +1515,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="40">
-            <Bounds Height="14" Left="492" Top="772" Width="35"/>
+            <Bounds Height="14" Left="475" Top="356" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_18</Texto>
             <Observacao/>
@@ -1543,13 +1543,12 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="11" PontaB="3"/>
         <Pontos>
-            <Ponto Left="804" Top="807"/>
-            <Ponto Left="804" Top="847"/>
-            <Ponto Left="810" Top="847"/>
-            <Ponto Left="810" Top="887"/>
+            <Ponto Left="628" Top="854"/>
+            <Ponto Left="628" Top="965"/>
+            <Ponto Left="818" Top="965"/>
         </Pontos>
         <LogicoCardinalidade ID="42">
-            <Bounds Height="14" Left="771" Top="817" Width="35"/>
+            <Bounds Height="14" Left="590" Top="864" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_19</Texto>
             <Observacao/>
@@ -1563,7 +1562,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="43">
-            <Bounds Height="14" Left="777" Top="869" Width="35"/>
+            <Bounds Height="14" Left="775" Top="953" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_20</Texto>
             <Observacao/>
@@ -1591,13 +1590,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="12" PontaB="3"/>
         <Pontos>
-            <Ponto Left="804" Top="578"/>
-            <Ponto Left="804" Top="732"/>
-            <Ponto Left="842" Top="732"/>
-            <Ponto Left="842" Top="887"/>
+            <Ponto Left="841" Top="533"/>
+            <Ponto Left="841" Top="710"/>
+            <Ponto Left="859" Top="710"/>
+            <Ponto Left="859" Top="886"/>
         </Pontos>
         <LogicoCardinalidade ID="46">
-            <Bounds Height="14" Left="771" Top="588" Width="35"/>
+            <Bounds Height="14" Left="803" Top="543" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_21</Texto>
             <Observacao/>
@@ -1611,7 +1610,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="47">
-            <Bounds Height="14" Left="809" Top="869" Width="35"/>
+            <Bounds Height="14" Left="822" Top="868" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_22</Texto>
             <Observacao/>
@@ -1639,13 +1638,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="12" PontaB="2"/>
         <Pontos>
-            <Ponto Left="726" Top="495"/>
-            <Ponto Left="604" Top="495"/>
-            <Ponto Left="604" Top="720"/>
-            <Ponto Left="482" Top="720"/>
+            <Ponto Left="763" Top="450"/>
+            <Ponto Left="614" Top="450"/>
+            <Ponto Left="614" Top="304"/>
+            <Ponto Left="465" Top="304"/>
         </Pontos>
         <LogicoCardinalidade ID="49">
-            <Bounds Height="14" Left="687" Top="483" Width="35"/>
+            <Bounds Height="14" Left="719" Top="438" Width="40"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_23</Texto>
             <Observacao/>
@@ -1659,7 +1658,7 @@
             <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
         </LogicoCardinalidade>
         <LogicoCardinalidade ID="50">
-            <Bounds Height="14" Left="492" Top="708" Width="35"/>
+            <Bounds Height="14" Left="475" Top="292" Width="39"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_24</Texto>
             <Observacao/>
