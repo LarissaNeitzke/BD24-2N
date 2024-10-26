@@ -1,0 +1,24 @@
+CREATE TABLE Cliente (
+	ID_Cliente INT PRIMARY KEY,
+	Nome_Cliente VARCHAR(252) NOT NULL,
+	Data_Nasc DATE,
+	CPF VARCHAR(252)
+);
+
+CREATE TABLE Produto (
+	ID_Produto INT PRIMARY KEY,
+	Nome_Produto VARCHAR(252) NOT NULL,
+	Descricao TEXT NULL,
+	Preco NUMERIC CHECK (PRECO > 0) NOT NULL,
+	Estoque SMALLINT DEFAULT 0
+	
+);
+
+CREATE TABLE Pedido (
+	ID_Pedido SERIAL PRIMARY KEY,
+	ID_Cliente INT NOT NULL REFERENCES Cliente (ID_Cliente),
+	ID_Produto INT NOT NULL,
+	Quantidade SMALLINT NOT NULL,
+	FOREIGN KEY (ID_Produto) REFERENCES Produto (ID_Produto)
+	
+);
