@@ -1,55 +1,41 @@
-/* FilmeCorra */
+/** Relação Tratamento **/
+INSERT INTO tratamento (tratamento_id, tratamento_nome, descricao) VALUES
+(1, 'Manipulação', 'Escolha e atração de afro-americano alvo para a região.'),
+(2, 'Controle', 'Uso de hipnose para controle do indivíduo em questão.'),
+(3, 'Transferência', 'A partir de neurocirurgia, é realizado um transplante cerebral em que a mente de um controlador é transferida para o corpo de um espectador, tomando, assim, posse parcial do indivíduo.'),
+(4, 'Coagulação', 'Fase final do tratamento em que é exercido e obtido o controle completo sobre o sujeito submetido.');
+SELECT * FROM tratamento;
 
-CREATE TABLE Personagem (
-    Personagem_ID INT PRIMARY KEY,
-    Etnia VARCHAR(252),
-    Genero VARCHAR(252),
-    Personagem_Nome VARCHAR(252),
-    fk_Tratamento_Tratamento_ID INT
-);
+/** Relação Familia **/
+INSERT INTO familia (familia_id, familia_nome) VALUES
+(1, 'Armitage'),
+(2, 'Washington'),
+(3, 'Dray');
+SELECT * FROM familia;
 
-CREATE TABLE Familia (
-    Familia_ID INT PRIMARY KEY,
-    Familia_Nome VARCHAR(252)
-);
+/** Relação Personagem **/
+INSERT INTO personagem (personagem_id, personagem_nome, etnia, genero, fk_tratamento_tratamento_id) VALUES
+(1, 'Missy', 'Branco', 'Feminino', NULL),
+(2, 'Rose', 'Branco', 'Feminino', NULL),
+(3, 'Dean', 'Branco', 'Masculino', NULL),
+(4, 'Jeremy', 'Branco', 'Masculino', NULL),
+(5, 'Chris', 'Negro', 'Masculino', 2);
+SELECT * FROM personagem;
 
-CREATE TABLE Contexto_Sociocultural (
-    Origem VARCHAR(252),
-    Classe_Social VARCHAR(252),
-    Crenca VARCHAR(252),
-    fk_Familia_Familia_ID INT,
-    fk_Personagem_Personagem_ID INT
-);
+/** Relação Contexto_Sociocultural **/
+INSERT INTO contexto_sociocultural (origem, classe_social, crenca, fk_familia_familia_id, fk_personagem_personagem_id) VALUES
+('Privilegiada', 'Alta', NULL, 1, 1),
+('Privilegiada', 'Alta', NULL, 1, 1),
+('Privilegiada', 'Alta', NULL, 1, 1),
+('Privilegiada', 'Alta', NULL, 1, 1),
+('Bairro pobre', 'Média', 'Cristão', 2, 5);
+SELECT * FROM contexto_sociocultural;
 
-CREATE TABLE Tratamento (
-    Tratamento_ID INT PRIMARY KEY,
-    Tratamento_Nome VARCHAR(252),
-    Descricao VARCHAR(252)
-);
-
-CREATE TABLE MembroFamilia (
-    Estado_Psicologico INT,
-    fk_Personagem_Personagem_ID INT,
-    fk_Familia_Familia_ID INT
-);
- 
-ALTER TABLE Personagem ADD CONSTRAINT FK_Personagem_2
-    FOREIGN KEY (fk_Tratamento_Tratamento_ID)
-    REFERENCES Tratamento (Tratamento_ID)
-    ON DELETE CASCADE;
- 
-ALTER TABLE Contexto_Sociocultural ADD CONSTRAINT FK_Contexto_Sociocultural_1
-    FOREIGN KEY (fk_Familia_Familia_ID)
-    REFERENCES Familia (Familia_ID);
- 
-ALTER TABLE Contexto_Sociocultural ADD CONSTRAINT FK_Contexto_Sociocultural_2
-    FOREIGN KEY (fk_Personagem_Personagem_ID)
-    REFERENCES Personagem (Personagem_ID);
- 
-ALTER TABLE MembroFamilia ADD CONSTRAINT FK_MembroFamilia_1
-    FOREIGN KEY (fk_Personagem_Personagem_ID)
-    REFERENCES Personagem (Personagem_ID);
- 
-ALTER TABLE MembroFamilia ADD CONSTRAINT FK_MembroFamilia_2
-    FOREIGN KEY (fk_Familia_Familia_ID)
-    REFERENCES Familia (Familia_ID);
+/** Relação MembroFamilia **/
+INSERT INTO membrofamilia (estado_psicologico, fk_personagem_personagem_id, fk_familia_familia_id) VALUES
+('Espectador', 5, 2),
+('Controlador', 1, 1),
+('Controlador', 2, 1),
+('Controlador', 3, 1),
+('Controlador', 4, 1);
+SELECT * FROM membrofamilia;
