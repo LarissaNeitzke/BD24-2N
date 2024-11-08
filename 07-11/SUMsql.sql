@@ -21,8 +21,9 @@ SELECT COUNT (*) as usuarios_femininos
 FROM cliente
 WHERE genero = 'feminino';
 
-SELECT COUNT (cliente) FROM (SELECT cliente COUNT (genero) AS usuarios_masculinos,usuarios_femininos WHERE genero = 'masculino' AND genero = 'feminino' GROUP BY genero) AS usuarios_masculinos,usuarios_femininos;
-
+SELECT
+    (SELECT COUNT(*) FROM cliente WHERE genero = 'masculino') AS usuarios_masculinos,
+    (SELECT COUNT(*) FROM cliente WHERE genero = 'feminino') AS usuarios_femininos;
 
 
 /*Crie uma expressão que somará de todos os preços da relação produto com 10* de desconto*/
