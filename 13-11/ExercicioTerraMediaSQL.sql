@@ -21,3 +21,8 @@ AND cenarios.id_cenario = coletados.id_cenario AND id_personagem = 3
 
 
 /*Somar o valor dos itens coletados no cenário 'Floresta de Lothlórien'*/
+SELECT SUM(valor)
+FROM itens,cenarios,coletados
+WHERE coletados.id_cenario = 1 
+AND itens.id_item = coletados.id_item 
+AND coletados.id_cenario = cenarios.id_cenario
