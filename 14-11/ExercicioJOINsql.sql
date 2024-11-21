@@ -67,8 +67,17 @@ on produto.id_categoria = categoria.id_categoria
 
 select * from pedido
 
+---------
+SELECT id_pedido, produto.nome_produto, categoria.nome_categoria FROM pedido
+JOIN cliente ON cliente.id_cliente = pedido.id_cliente
+JOIN produto ON produto.id_produto = pedido.id_produto
+JOIN categoria ON categoria.id_categoria = produto.id_categoria
+WHERE cliente.id_cliente = 1 AND categoria.id_categoria = 2;
 
 /*selecione os pedidos com os nomes dos produtos de um usuario*/
-
+SELECT id_pedido, produto.nome_produto FROM pedido
+JOIN cliente ON cliente.id_cliente = pedido.id_cliente
+JOIN produto ON produto.id_produto = pedido.id_produto
+WHERE cliente.id_cliente = 1;
 
 
