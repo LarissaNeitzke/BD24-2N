@@ -1,5 +1,4 @@
-TO FIND TABLES NAMES
-
+/*Nomes das tabelas*/
 SELECT name 
   FROM sqlite_master
  where type = 'table'
@@ -78,37 +77,30 @@ SELECT value FROM solution;
 /*Depoimento do culpado*/
 SELECT * FROM interview 
 WHERE person_id = '67318'
-
-
-
-
-
-
-I was hired by a woman with a lot of money. 
+/*I was hired by a woman with a lot of money. 
   I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). 
   She has red hair and she drives a Tesla Model S. 
-  I know that she attended the SQL Symphony Concert 3 times in December 2017.
+  I know that she attended the SQL Symphony Concert 3 times in December 2017.*/
 
+SELECT * FROM drivers_license /*Essa tabela tem gender, hair_color, car_make, car_model*/
+JOIN person
+ON drivers_license.id = person.license_id /*Juntei as duas tabelas para conseguir encontrar a conexão com a tabela facebook_event_checkin*/
+JOIN facebook_event_checkin
+ON person.id = facebook_event_checkin.person_id
+WHERE gender = 'female'
+AND car_model = 'Model S' 
+AND car_make = 'Tesla' 
+AND hair_color = 'red' 
+AND event_name /*Juntando as tabelas, consegui filtrar o nome do evento e apareceu 3 concertos em December 2017 com name 'Miranda Priestly'*/
+LIKE '%SQL Symphony Concert%'
 
+/*Rodei solução de novo*/
+INSERT INTO solution VALUES (1, 'Miranda Priestly');
+SELECT value FROM solution;
+/*Congrats, you found the brains behind the murder! Everyone in SQL City hails you as the greatest SQL detective of all time. Time to break out the champagne!*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Assassino: Jeremy Bowers
+Mandante: Miranda Priestly
 
 
 
