@@ -1,7 +1,7 @@
 /*Nomes das tabelas*/
 SELECT name 
-  FROM sqlite_master
- where type = 'table'
+FROM sqlite_master
+WHERE type = 'table'
 
 /*Descobri os crimes que tem na tabela*/
 SELECT DISTINCT type FROM crime_scene_report;
@@ -25,7 +25,7 @@ The second witness, named Annabel, lives somewhere on "Franklin Ave".*/
 SELECT * FROM person
 
 /*Filtrei a tabela 'person' pelo nome da rua e o número da casa e ordenei por ordem descrente para saber o maior 
-  número da casa e assim considerar que é a última casa da rua*/
+número da casa e assim considerar que é a última casa da rua*/
 SELECT * FROM person 
 WHERE address_street_name = 'Northwestern Dr' 
 ORDER BY address_number DESC
@@ -38,7 +38,7 @@ ORDER BY name
 /*id: 16371, name: Annabel Miller, license_id:490173, address_number:103, address_street_name: Franklin Ave, ssn: 318771143*/
 
 /*Depois que descobri as testemunhas, precisei descobrir o que elas falaram para saber como prosseguir e encontrar o culpado*/
-SELECT * FROM interview /*Quando pesquisei no geral, não tinha os nomes, só id_person então filtrei pelo id_person das testemunhas*/
+SELECT * FROM interview /*Quando pesquisei no geral não tinha os nomes, só id_person, então filtrei pelo id_person das testemunhas*/
 WHERE person_id IN ('14887','16371')
 
 /*Com base nos depoimentos o suspeito tem "Get Fit Now Gym" bag, membership number inicia com "48Z", apenas membros Gold tem essa bag, 
@@ -54,8 +54,8 @@ ORDER BY id DESC
 SELECT * FROM drivers_license
 WHERE gender = 'male'
 AND plate_number LIKE '%H42W%' /*Ensina no walkthrough para filtrar informação que contenha isso dentro da coluna*/
-/*423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
-664760	21	71	black	black	male	4H42WR	Nissan	Altima*/
+/* 423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
+   664760	21	71	black	black	male	4H42WR	Nissan	Altima*/
 
 /*Para eu descobrir qual desses 2 resultados era membro da academia ou os dois, fiz outro select juntando todos os filtros para ver se o resultado mudava*/
 SELECT person_id, person.name, membership_status, plate_number
