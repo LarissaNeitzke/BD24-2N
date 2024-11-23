@@ -3,10 +3,10 @@ SELECT name
   FROM sqlite_master
  where type = 'table'
 
-  /*Descobrir os crimes que tem na tabela*/
+/*Descobri os crimes que tem na tabela*/
 SELECT DISTINCT type FROM crime_scene_report;
 
-/*Considerando que tem o tipo de crime 'murder' filtrar pela cidade que foi 
+/*Considerando que tem o tipo de crime 'murder' filtrei pela cidade que foi 
 informada no início do exercício 'SQL City'*/
 SELECT * FROM crime_scene_report
 WHERE type = 'murder' 
@@ -24,7 +24,7 @@ The second witness, named Annabel, lives somewhere on "Franklin Ave".*/
 /*Filtrei por todos os registros da tabela 'person', mas retornou várias pessoas*/  
 SELECT * FROM person
 
-/*Filtrei a tabela 'person' pelo nome da rua e o número da casa ordenei por ordem descrente para saber o maior 
+/*Filtrei a tabela 'person' pelo nome da rua e o número da casa e ordenei por ordem descrente para saber o maior 
   número da casa e assim considerar que é a última casa da rua*/
 SELECT * FROM person 
 WHERE address_street_name = 'Northwestern Dr' 
@@ -41,8 +41,8 @@ ORDER BY name
 SELECT * FROM interview /*Quando pesquisei no geral, não tinha os nomes, só id_person então filtrei pelo id_person das testemunhas*/
 WHERE person_id IN ('14887','16371')
 
-/*Com base nos depoimentos o suspeito tem Get Fit Now Gym" bag, membership number inicia com "48Z", apenas membros Gold tem essa bag, 
-a placa do carro que entrou tem "H42W" e aparentemente foi na academia dia 9th, January*/
+/*Com base nos depoimentos o suspeito tem "Get Fit Now Gym" bag, membership number inicia com "48Z", apenas membros Gold tem essa bag, 
+a placa do carro que ele entrou tem "H42W" e aparentemente foi na academia no dia 9th, January*/
 SELECT * FROM get_fit_now_member /*Consultei os nomes das colunas*/
 WHERE membership_status = 'gold' /*Membros 'gold'*/
 ORDER BY id DESC
@@ -53,11 +53,11 @@ ORDER BY id DESC
 /*Para descobrir as placas dos carros*/
 SELECT * FROM drivers_license
 WHERE gender = 'male'
-AND plate_number LIKE '%H42W%' /*Ensina no walkthrough paara filtrar informação que contenha isso dentro da coluna*/
+AND plate_number LIKE '%H42W%' /*Ensina no walkthrough para filtrar informação que contenha isso dentro da coluna*/
 /*423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
 664760	21	71	black	black	male	4H42WR	Nissan	Altima*/
 
-/*Consultar a data de check in conforme testemunha falou 9th, January*/
+/*Consultei a data de check in conforme testemunha falou 9th, January*/
 SELECT * FROM get_fit_now_check_in
 WHERE check_in_date = '20180109'
 AND membership_id IN ('48Z7A','48Z55') /*membership dos suspeitos*/
