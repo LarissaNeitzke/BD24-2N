@@ -57,17 +57,21 @@ AND plate_number LIKE '%H42W%' /*Ensina no walkthrough para filtrar informação
 /*423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
 664760	21	71	black	black	male	4H42WR	Nissan	Altima*/
 
+/*Para eu descobrir qual desses 2 resultados era membro da academia ou os dois, fiz outro select juntando todos os filtros para ver se o resultado mudava*/
+SELECT person_id, person.name, membership_status, plate_number
+FROM get_fit_now_member 
+JOIN person 
+ON get_fit_now_member.person_id = person.id
+JOIN drivers_license 
+ON person.license_id = drivers_license.id
+WHERE get_fit_now_member.id LIKE '48Z%' AND membership_status = 'gold' AND plate_number LIKE '%H42W%';
+/*Retornou somente um nome Jeremy Bowers*/
+
 /*Consultei a data de check in conforme testemunha falou 9th, January*/
 SELECT * FROM get_fit_now_check_in
 WHERE check_in_date = '20180109'
-AND membership_id IN ('48Z7A','48Z55') /*membership dos suspeitos*/
-/*48Z7A	20180109	1600	1730
-48Z55	20180109	1530	1700*/
-
-/*Conferir quem fez check in no dia do crime e onde estava, só apareceu resultado no person_id '67318'(Jeremy Bowers)*/
-SELECT * FROM facebook_event_checkin
-WHERE person_id = '67318' 
-/*67318	4719	The Funky Grooves Tour	20180115*/
+AND membership_id = '48Z55' /*membership do suspeito Jeremy*/
+/*48Z55	20180109	1530	1700*/
 
 /*Testei este nome no solution*/
 INSERT INTO solution VALUES (1, 'Jeremy Bowers');
