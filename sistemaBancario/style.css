@@ -1,0 +1,44 @@
+/* Estilos gerais para a página dos Sistema Bancário */
+body{
+    background-color: #d5b459; /*Cor do fundo da página*/
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Definir fonte da página*/
+
+    margin: 0; /*Remove a margem padrão*/
+    padding: 20px; /*Adiciona um espaço interno (padding) na página*/
+
+}
+
+/*Estilos para container principal*/
+.container{
+    background-color: #a17819;
+    border-radius: 50px; /*Cantos arredondados*/
+
+    padding: 30px;
+    /*Adicionar um espaço interno (padding) ao redor do conteúdo*/
+
+    max-width: 400px;
+    /*Define a largura máxima do container*/
+
+    margin: auto;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    /*Adiciona sobra para destacar o container*/
+
+
+}
+
+/*Estilos para o título*/
+h1{
+    text-align: center; /*Centralizar o texto*/
+    color: aliceblue; /*Cor do título*/
+    -webkit-text-stroke: 0.6pt #000000;
+}
+
+/*Estilos para os inputs e botões*/
+input{
+    width: 40%; /*Faz o campo de entrada ocupar a largura disponível*/
+    padding: 3px; /*Espaço interno ao redor do texto no campo*/
+    margin: 6px 0; /*Adiciona um espaço de 5px acima e abaixo do campo*/
+    border-radius: 5px; /*Arredondar os cantos do campo*/
+    border: px solid #000000; /*Borda cinza clara*/
+}

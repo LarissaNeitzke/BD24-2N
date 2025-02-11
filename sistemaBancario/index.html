@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--Define o idioma-->
+<head>
+    <meta charset="UTF-8"> <!--Aceita acentos/Codificação de acentos/caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Vai manter a imagem visual, mesmo se aumentar ou diminuir a tela-->
+    <title>Sistema Bancário</title> <!--Título da aba-->
+
+    <!--Link para arquivo CSS externo-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--Container principal para o conteúdo da interface-->
+    <div class="container">
+        <!--Título principal da aplicação-->
+        <h1> Sistema Bancário </h1>
+
+        <h2> Sistema Bancário da 24-2N </h2>
+
+        <!--Campo de entrada para o valor-->
+        <label form="valor"> Digite um valor:</label> <!--Rótulo para o campo valor-->
+        <input type="number" id="valor" placeholder="Ex.: 100.00"><br> <!--Campo para inserir o valor-->
+
+        <!--Botões para interagir-->
+        <button onclick="sacar()">Sacar</button> <!--Botão para realizar o saque-->
+        <button onclick="depositar()">Depositar</button> <!--Botão para realizar depósito-->
+
+        <!--Exibindo o saldo atual da conta-->
+        <div classe="balance">
+            Saldo: R$ <span id="saldo">0.00</span> <!--Exibição dinâmica do saldo-->
+        </div>
+    
+
+</body>
+</html>
